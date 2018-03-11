@@ -24,3 +24,12 @@ a {
 	text-decoration: none;
 	outline: 0;
 }
+
+input {
+	user-select: text;
+}
+
+input.incorrect {
+	border-radius: 6px;
+	border: solid red 2px;
+}

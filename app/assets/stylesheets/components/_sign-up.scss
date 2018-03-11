@@ -16,5 +16,10 @@
 		text-align: center;
 		margin-top: 32px;
 		cursor: pointer;
+
+		&.inactive {
+			background: #444;
+			color: #888;
+		}
 	}
 }
