@@ -1,9 +1,9 @@
 const express = require("express");
 const path = require("path");
 const webpack = require("webpack");
-const logger = require("../build/lib/logger");
-const webpackConfig = require("../build/webpack.config");
-const project = require("../project.config");
+const logger = require("./build/lib/logger");
+const webpackConfig = require("./build/webpack.config");
+const project = require("./project.config");
 const compress = require("compression");
 
 const app = express();

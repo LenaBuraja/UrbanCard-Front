@@ -1,0 +1,9 @@
+.page-layout {
+	& .viewport {
+		padding-top: 4rem;
+	}
+	& .active-nav {
+		font-weight: bold;
+		text-decoration: underline;
+	}
+}

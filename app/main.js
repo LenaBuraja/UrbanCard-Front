@@ -1,14 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import createStore from "./store/createStore";
-import "./styles/main.scss";
+import createStore from "./createStore";
+import "./assets/stylesheets/main.scss";
+import App from "./App";
+import CreateRoutes from "./createRoutes";
 
 const store = createStore(window.__INITIAL_STATE__);
 const MOUNT_NODE = document.getElementById("root");
 
 let render = () => {
-	const App = require("./components/App").default;
-	const routes = require("./routes/index").default(store);
+	const routes = CreateRoutes(store);
 	ReactDOM.render(
 		<App store={store} routes={routes} />,
 		MOUNT_NODE
@@ -31,13 +32,12 @@ if (__DEV__) {
 			}
 		};
 		module.hot.accept([
-			"./components/App",
-			"./routes/index"
+			"./App",
+			"./createRoutes"
 		], () => setImmediate(() => {
 			ReactDOM.unmountComponentAtNode(MOUNT_NODE);
 			render();
-		})
-		);
+		}));
 	}
 }
 

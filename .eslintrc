@@ -49,6 +49,7 @@
 		"no-multi-spaces": [
 			"error"
 		],
+		"no-tabs": 0,
 		"keyword-spacing": [
 			"error",
 			{
