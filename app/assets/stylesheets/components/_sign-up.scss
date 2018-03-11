@@ -1,0 +1,19 @@
+.sign-up {
+	border-radius: 64px;
+	padding: 64px;
+	background: #5094e6;
+
+	& input {
+		transform: translateY(-16px);
+	}
+
+	& .btn {
+		background: #00234c;
+		color: #5094e6;
+		padding: 16px;
+		border-radius: 16px;
+		text-align: center;
+		margin-top: 32px;
+		cursor: pointer;
+	}
+}

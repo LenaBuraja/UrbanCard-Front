@@ -30,6 +30,10 @@
 			"error",
 			"tab"
 		],
+		"jsx-quotes": [
+			"error",
+			"prefer-double"
+		],
 		"linebreak-style": [
 			"error",
 			"unix"

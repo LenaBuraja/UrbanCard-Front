@@ -1,5 +1,6 @@
 @import "components/page-layout";
 @import "components/home";
+@import "components/sign-up";
 
 html {
 	box-sizing: border-box;
@@ -16,4 +17,9 @@ body {
 *:before,
 *:after {
 	box-sizing: inherit;
+}
+
+a {
+	text-decoration: none;
+	outline: 0;
 }

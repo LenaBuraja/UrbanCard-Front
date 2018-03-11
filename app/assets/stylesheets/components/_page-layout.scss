@@ -1,9 +1,41 @@
 .page-layout {
+	& .header {
+		background: #5094e6;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		& h1 {
+			margin: 16px;
+			font-size: 48px;
+			display: inline-block;
+			color: #00234c;
+		}
+		& .btn {
+			display: inline-block;
+			margin: 8px;
+			padding: 16px;
+			background: #0454b4;
+			color: #000;
+			border-radius: 8px;
+			width: 141px;
+			text-align: center;
+		}
+		& .active-nav.btn {
+			background: #00234c;
+			color: #5094e6;
+		}
+		& .btn:last-of-type,
+		& .btn:first-of-type {
+			margin-right: 32px;
+		}
+	}
 	& .viewport {
-		padding-top: 4rem;
+		padding-top: 64px;
+		width: 100%;
+		display: flex;
+		justify-content: center;
 	}
 	& .active-nav {
-		font-weight: bold;
-		text-decoration: underline;
 	}
 }
