@@ -4,12 +4,21 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		flex-wrap: wrap;
+
+		& > div {
+			display: flex;
+		}
 
 		& h1 {
 			margin: 16px;
 			font-size: 48px;
 			display: inline-block;
 			color: #00234c;
+		}
+		& :not(.active-nav) h1 {
+			text-shadow: -4px -4px 1px rgba(0, 0, 0, 0.3);
+			transform: translate(4px, 4px);
 		}
 		& .btn {
 			display: inline-block;
@@ -25,8 +34,7 @@
 			background: #00234c;
 			color: #5094e6;
 		}
-		& .btn:last-of-type,
-		& .btn:first-of-type {
+		& .btn:last-of-type {
 			margin-right: 32px;
 		}
 	}

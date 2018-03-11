@@ -1,6 +1,11 @@
 .home {
 	width: 768px;
 
+	& p,
+	& p * {
+		user-select: text;
+	}
+
 	& .duck {
 		display: block;
 		width: 120px;

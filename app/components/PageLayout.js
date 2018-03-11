@@ -9,15 +9,19 @@ export const PageLayout = ({ children }) => (
 				<h1>UrbanCard</h1>
 			</IndexLink>
 			<div>
-				<Link to="/price-list" className={"btn"} activeClassName="active-nav">
-					Тарифы
-				</Link>
-				<Link to="/sign-up" className={"btn"} activeClassName="active-nav">
-					Регистрация
-				</Link>
-				<Link to="/counter" className={"btn"} activeClassName="active-nav">
-					Вход
-				</Link>
+				<div>
+					<Link to="/price-list" className={"btn"} activeClassName="active-nav">
+						Тарифы
+					</Link>
+				</div>
+				<div>
+					<Link to="/sign-up" className={"btn"} activeClassName="active-nav">
+						Регистрация
+					</Link>
+					<Link to="/counter" className={"btn"} activeClassName="active-nav">
+						Вход
+					</Link>
+				</div>
 			</div>
 		</div>
 		<div className="viewport">
