@@ -15,11 +15,13 @@
 			font-size: 48px;
 			display: inline-block;
 			color: #00234c;
+			transition: 300ms ease-in-out;
 		}
-		& :not(.active-nav) h1 {
-			text-shadow: -4px -4px 1px rgba(0, 0, 0, 0.3);
-			transform: translate(4px, 4px);
+		& .active-nav h1 {
+			text-shadow: 0 -8px 2px rgba(0, 0, 0, 0.3);
+			transform: translate(0, 8px);
 		}
+
 		& .btn {
 			display: inline-block;
 			margin: 8px;
@@ -29,10 +31,13 @@
 			border-radius: 8px;
 			width: 141px;
 			text-align: center;
+			transition: 300ms ease-in-out;
 		}
 		& .active-nav.btn {
 			background: #00234c;
 			color: #5094e6;
+			box-shadow: 0 -8px 2px rgba(0, 0, 0, 0.3);
+			transform: translate(0, 8px);
 		}
 		& .btn:last-of-type {
 			margin-right: 32px;
