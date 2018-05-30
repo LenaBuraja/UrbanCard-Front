@@ -1,0 +1,88 @@
+@import "variables";
+
+#profile-page {
+	margin-top: 64px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+	.header {
+		display: flex;
+		align-items: center;
+		img {
+			margin: 16px;
+			width: 128px;
+		}
+		div {
+			p {
+				margin: 0;
+				padding: 0;
+			}
+			p:first-of-type {
+				font-size: 48px;
+				margin-bottom: 24px;
+			}
+		}
+	}
+
+	.cards {
+		div {
+			div {
+				display: flex;
+
+				&.card-row {
+					cursor: pointer;
+					&:hover {
+						background: $lt2_green;
+					}
+					&.active {
+						background: $dk2_main;
+						color: $lt2_main;
+					}
+				}
+				&.legend:hover {
+					background: transparent;
+				}
+
+				&.details {
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: center;
+					background: $lt2_purple;
+					max-width: calc(5 * 160px);
+
+					p {
+						margin: 8px 32px;
+
+						span {
+							font-size: 24px;
+						}
+					}
+				}
+				&:not(.details) {
+					p {
+						display: flex;
+						text-align: center;
+						justify-content: center;
+						align-items: center;
+						width: 160px;
+						height: 64px;
+						margin: 0;
+						border: 1px $lt2_main;
+
+						img {
+							height: 80px;
+						}
+					}
+
+					p:nth-of-type(2),
+					p:nth-of-type(3),
+					p:nth-of-type(4),
+					p:nth-of-type(5) {
+						border-left-style: solid;
+					}
+				}
+			}
+		}
+	}
+}

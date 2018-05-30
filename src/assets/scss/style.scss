@@ -1,0 +1,21 @@
+@import "variables";
+@import "header";
+@import "auth";
+@import "profile";
+
+html, body {
+	margin: 0;
+	padding: 0;
+	color: $dk2_main;
+}
+
+a, button:focus, button::-moz-focus-inner {
+	text-decoration: none;
+	outline: none;
+	border: 0;
+}
+
+.wrapper #content {
+	height: calc(100vh - 96px);
+	overflow-y: auto;
+}

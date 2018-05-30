@@ -1,0 +1,84 @@
+@import "variables";
+
+header {
+	background: $main;
+	min-height: 96px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 16px;
+
+	.main {
+		display: flex;
+		height: 64px;
+		padding: 0 16px;
+		align-items: center;
+		color: $dk2_main;
+		text-transform: uppercase;
+		font-size: 32px;
+		text-shadow: 2px 2px 2px $lt1_main;
+
+		&:not(.active) {
+			background: $lt1_main;
+			border-radius: 16px;
+			box-shadow: 0 0 12px $lt1_main;
+			&:hover {
+				box-shadow: 0 0 12px $dk2_main;
+			}
+		}
+
+	}
+
+	.links {
+		display: flex;
+		align-items: center;
+
+		& > * {
+			min-width: 256px;
+		}
+
+		a {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 8px 8px;
+			margin: 0 16px;
+			color: $dk2_main;
+			height: 48px;
+			font-size: 32px;
+			border-radius: 8px;
+			border: 3px solid $dk2_main;
+
+			&.active {
+				background: transparent;
+				border-color: transparent;
+				color: $lt2_main;
+				text-shadow: 2px 2px 2px $dk2_main;
+			}
+			&:not(.active) {
+				background: $lt1_main;
+				&:hover {
+					background: $dk1_main;
+					color: $lt2_main;
+				}
+			}
+		}
+
+		.userEmail, .logout {
+			margin: 0;
+			display: flex;
+			justify-content: right;
+			color: $lt2_main;
+			text-shadow: 2px 2px 2px $dk2_main;
+			cursor: pointer;
+		}
+
+		.userEmail {
+			font-size: 24px;
+		}
+	}
+
+	img {
+		height: 48px;
+	}
+}
