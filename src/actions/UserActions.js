@@ -72,6 +72,31 @@ export default class UserActions {
 		});
 	}
 
+	static getPriceList() {
+		return (dispatch) => new Promise((resolve, reject) => {
+			UserActions.GET('price/list')
+				.then((res) => {
+					console.log(res.data.result);
+					dispatch(UserReducer.actions.setPriceList(res.data.result));
+					resolve();
+				});
+		});
+	}
+
+	static createOrder(cardId, transports, orderType, count) {
+		return (dispatch) => new Promise((resolve, reject) => {
+			UserActions.POST('order/create', { cardId, transports, orderType, count, activateAt: new Date() })
+				.then((res) => {
+					console.log(res.data.result);
+					console.log(dispatch(UserActions.getOrders(cardId)));
+					resolve();
+				})
+				.catch((e) => {
+					console.log(e.response.data.error);
+				})
+		})
+	}
+
 	static me() {
 		return (dispatch) => new Promise((resolve, reject) => {
 			UserActions.GET('user/me')

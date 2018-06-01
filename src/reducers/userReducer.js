@@ -7,6 +7,7 @@ export default createModule({
 		cards: null,
 		ordersByCardId: {},
 		authChecked: false,
+		priceList: [],
 	},
 	transformations: {
 		setUserInfo: { reducer: (state, { payload }) => ({ ...state, info: payload, authChecked: true }) },
@@ -20,5 +21,6 @@ export default createModule({
 				return newState;
 			},
 		},
+		setPriceList: { reducer: (state, { payload }) => ({ ...state, priceList: payload }) },
 	},
 });

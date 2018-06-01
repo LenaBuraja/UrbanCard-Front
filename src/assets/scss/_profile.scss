@@ -1,9 +1,10 @@
 @import "variables";
 
 #profile-page {
-	margin-top: 64px;
+	margin: 0;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	flex-direction: column;
 
 	.header {
@@ -26,8 +27,8 @@
 	}
 
 	.cards {
-		div {
-			div {
+		& > div {
+			& > div {
 				display: flex;
 
 				&.card-row {
@@ -39,6 +40,17 @@
 						background: $dk2_main;
 						color: $lt2_main;
 					}
+					& > p > button {
+						border: solid 2px $dk2_main;
+						padding: 16px;
+						border-radius: 16px;
+						background: $lt1_main;
+						cursor: pointer;
+
+						&:hover {
+							background: $lt2_main;
+						}
+					}
 				}
 				&.legend:hover {
 					background: transparent;
@@ -46,10 +58,10 @@
 
 				&.details {
 					display: flex;
-					flex-wrap: wrap;
-					justify-content: center;
+					flex-direction: column;
+					align-items: center;
 					background: $lt2_purple;
-					max-width: calc(5 * 160px);
+					max-width: 804px;
 
 					p {
 						margin: 8px 32px;
@@ -57,9 +69,33 @@
 						span {
 							font-size: 24px;
 						}
+
+					}
+
+					& > div {
+						width: calc(100% - 32px);
+						display: flex;
+						justify-content: space-around;
+						&> span {
+							img {
+								margin-top: 2px;
+								height: 32px;
+							}
+						}
+
+						&.active {
+							margin: 4px;
+							background: $lt2_green;
+						}
 					}
 				}
 				&:not(.details) {
+					&> span {
+						display: flex;
+						text-align: center;
+						justify-content: center;
+						align-items: center;
+					}
 					p {
 						display: flex;
 						text-align: center;
@@ -69,17 +105,107 @@
 						height: 64px;
 						margin: 0;
 						border: 1px $lt2_main;
+						border-right-style: solid;
 
 						img {
 							height: 80px;
 						}
 					}
+				}
+			}
+		}
+	}
 
-					p:nth-of-type(2),
-					p:nth-of-type(3),
-					p:nth-of-type(4),
-					p:nth-of-type(5) {
-						border-left-style: solid;
+	&> .dk-back,
+	.modal-container {
+		top: 0;
+		position: fixed;
+		z-index: 999;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+	}
+
+	.dk-back {
+		background: black;
+		opacity: 0.8;
+	}
+
+	.modal {
+		padding: 16px;
+		background: white;
+		.modal-header {
+			display: flex;
+			justify-content: right;
+			button {
+				cursor: pointer;
+				background: $dk2_main;
+				font-size: 32px;
+				color: $purple;
+				border: solid 4px black;
+				border-radius: 8px;
+			}
+		}
+		.modal-body {
+			margin-top: 64px;
+			width: 512px;
+			&> div {
+				margin-bottom: 64px;
+				width: 100%;
+				display: flex;
+				justify-content: space-around;
+				&> div {
+					display: flex;
+					flex-direction: column;
+				}
+			}
+			select {
+				border: solid 4px $main;
+				background: white;
+				padding: 8px;
+				border-radius: 16px;
+			}
+			button {
+				background: $main;
+				color: $lt2_green;
+				border: solid 4px $dk2_main;
+				padding: 8px;
+				border-radius: 16px;
+				cursor: pointer;
+			}
+
+			.selector {
+				&> p {
+					text-align: center;
+					font-size: 20px;
+					font-weight: bold;
+					color: $lt1_green;
+					width: 192px;
+					border-bottom: solid 16px $lt2_green;
+
+					&.active {
+						color: $main;
+						border-bottom-color: $main;
+					}
+				}
+			}
+
+			.content-of-selector {
+				height: 384px;
+				background: $lt2_green;
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: center;
+
+				&> div {
+					padding: 32px;
+
+					&> p {
+						text-align: center;
 					}
 				}
 			}

@@ -2,11 +2,13 @@
 @import "header";
 @import "auth";
 @import "profile";
+@import "tooltips";
 
 html, body {
 	margin: 0;
 	padding: 0;
 	color: $dk2_main;
+	overflow-y: hidden;
 }
 
 a, button:focus, button::-moz-focus-inner {
@@ -17,5 +19,5 @@ a, button:focus, button::-moz-focus-inner {
 
 .wrapper #content {
 	height: calc(100vh - 96px);
-	overflow-y: auto;
+	overflow-y: scroll;
 }
